@@ -1,0 +1,6 @@
+berserk>=0.14.0
+python-chess>=1.999
+chess>=1.11.0
+hidapi>=0.14.0
+numpy>=1.24.0
+PyYAML>=5.4.0

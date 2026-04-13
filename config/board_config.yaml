@@ -1,0 +1,55 @@
+board:
+  corners:
+    a1:
+      x: 0.3883
+      y: 0.0961
+      z: 0.0993
+    a8:
+      x: 0.3862
+      y: -0.1507
+      z: 0.0988
+    h1:
+      x: 0.1424
+      y: 0.0972
+      z: 0.0975
+    h8:
+      x: 0.1391
+      y: -0.1506
+      z: 0.0987
+
+  hover_height: 0.15
+  square_size: 0.035
+  origin:
+    x: 0.3862
+    y: -0.1507
+    z: 0.0988
+
+  piece_heights:
+    pawn: -0.062
+    rook: -0.0605
+    knight: -0.0587
+    bishop: -0.0556
+    queen: -0.040
+    king: -0.0351
+
+  piece_height: -0.062
+
+capture_zone:
+  origin:
+    x: 0.220
+    y: 0.190
+  dimensions:
+    width: 0.09
+    height: 0.24
+  grid:
+    rows: 8
+    cols: 3
+
+robot:
+  movement:
+    max_velocity_scaling: 0.5
+    max_acceleration_scaling: 0.3
+    planning_time: 5.0
+    planning_attempts: 10
+    replan_attempts: 10
+    replan_delay: 0.1

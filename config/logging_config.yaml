@@ -1,0 +1,34 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: standard
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: detailed
+    filename: chess_robot.log
+
+root:
+  level: INFO
+  handlers: [console]
+
+loggers:
+  chess_robot_app:
+    level: INFO
+    handlers: [console]
+    propagate: false
+  chess_robot.performance:
+    level: INFO
+    handlers: [console]
+    propagate: false
