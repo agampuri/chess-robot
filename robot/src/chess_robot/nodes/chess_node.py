@@ -1,8 +1,4 @@
-"""
-Chess Robot ROS2 Node
 
-Simplified: no RViz wait, no RabbitMQ dependency.
-"""
 
 import rclpy
 from rclpy.node import Node
