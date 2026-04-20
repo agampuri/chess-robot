@@ -1,21 +1,4 @@
-"""
-Chessnut Air Lite Board Reader
 
-Protocol:
-  - Init command: [0x21, 0x01, 0x00]
-  - 63-byte packets: [0x01, 0x3D, ...32 bytes board data..., ...trailing...]
-  - 32 bytes = 64 squares (1 nibble per square)
-  - Ranks ordered 8->1 (4 bytes per rank)
-  - File mapping per rank:
-      Byte0_high=g, Byte0_low=h, Byte1_high=e, Byte1_low=f,
-      Byte2_high=c, Byte2_low=d, Byte3_high=a, Byte3_low=b
-
-Piece encoding:
-  0=empty  1=black queen  2=black king   3=black bishop
-  4=black pawn  5=black knight  6=white rook  7=white pawn
-  8=black rook  9=white bishop  A=white knight  B=white queen
-  C=white king
-"""
 
 import hid
 import chess
